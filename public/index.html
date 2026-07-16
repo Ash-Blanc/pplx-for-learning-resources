@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" data-theme="perspectify">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#151a22" />
+    <meta name="description" content="Perspectify turns scattered research into an evidence-backed learning path." />
+    <title>Perspectify | Research, with a route</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/tailwind.css" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#start">Skip to the start section</a>
+    <header class="site-header shell">
+      <a class="wordmark" href="/" aria-label="Perspectify home"><span class="wordmark-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>perspectify</span></a>
+      <nav class="nav-links" aria-label="Primary navigation"><a href="#system">System</a><a href="#evidence">Evidence</a><a href="https://openai.devpost.com/" target="_blank" rel="noreferrer">Build Week <span aria-hidden="true">↗</span></a></nav>
+      <a class="nav-cta btn btn-sm btn-outline" href="/dashboard">Open research desk <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero landing-hero shell" aria-labelledby="hero-title">
+        <div class="hero-intro"><div class="eyebrow"><span class="pulse-mark" aria-hidden="true"></span> Research operating system / v0.1</div><h1 id="hero-title">Your question.<br /><em>A shorter route.</em></h1><p class="hero-dek">Perspectify turns an internet-sized topic into a clear learning brief. It finds the signal, checks the evidence, and shows you what is worth your time.</p><div class="hero-actions"><a class="btn btn-primary btn-lg" href="/dashboard">Start with a question <span aria-hidden="true">↗</span></a><a class="quiet-link" href="#system">See how it works <span aria-hidden="true">↓</span></a></div><div class="hero-footnote"><span class="live-dot" aria-hidden="true"></span><span>Built for learners who want context, not content piles.</span></div></div>
+        <div class="landing-preview" aria-label="Preview of the research desk"><div class="preview-window"><div class="preview-topbar"><span><i></i><i></i><i></i></span><span>perspectify / live brief</span><span class="badge badge-success badge-outline">Agent ready</span></div><div class="preview-body"><div class="preview-kicker">Your next question</div><div class="preview-prompt"><span aria-hidden="true">›</span> AI agents and MCP</div><div class="preview-line"></div><div class="preview-stages"><div class="preview-stage done"><span>✓</span><b>Plan</b><small>Intent mapped</small></div><div class="preview-stage done"><span>✓</span><b>Find</b><small>Sources selected</small></div><div class="preview-stage active"><span>·</span><b>Check</b><small>Claims compared</small></div><div class="preview-stage"><span>○</span><b>Write</b><small>Route next</small></div></div><div class="preview-result"><span class="utility-label">The shortest route</span><strong>Model, loop, tools.</strong><p>Start with the mental model, then trace how context and permissions turn a model into a useful agent.</p><a href="/dashboard">Open the full brief <span aria-hidden="true">↗</span></a></div></div><div class="preview-footer"><span>05 sources selected</span><span>12 claims checked</span><span>08 echoes filtered</span></div></div><div class="preview-note"><span class="note-line" aria-hidden="true"></span><span>The output is useful because you can see the work.</span></div></div>
+      </section>
+
+      <section class="proof-strip shell" aria-label="Perspectify principles"><div class="proof-item"><span class="proof-index">01</span><strong>Find the signal</strong><small>Across docs, papers, and the web.</small></div><div class="proof-item"><span class="proof-index">02</span><strong>Show the reasoning</strong><small>Claims, confidence, and context.</small></div><div class="proof-item"><span class="proof-index">03</span><strong>Give me a route</strong><small>Ten minutes can still be meaningful.</small></div></section>
+
+      <section class="system-section" id="system" aria-labelledby="system-title"><div class="shell"><div class="section-intro"><div><span class="eyebrow">The system</span><h2 id="system-title">A research loop<br /><em>you can inspect.</em></h2></div><p>Search results give you options. Perspectify gives you judgment. Every stage has a job, a signal, and a reason to trust the next step.</p></div><div class="system-grid"><article class="system-card system-card-large card"><div class="card-kicker"><span class="system-number">01</span><span class="badge badge-outline">Discovery</span></div><h3>From question to source map.</h3><p>Parallel finds the field. Firecrawl opens the pages. The agent keeps original sources close and derivative noise at arm's length.</p><div class="source-map" aria-label="Source map illustration"><span>specification</span><span>docs</span><span>paper</span><span>field note</span><i aria-hidden="true"></i></div></article><article class="system-card system-card-dark card"><div class="card-kicker"><span class="system-number">02</span><span class="badge badge-success badge-outline">Evidence</span></div><h3>Claims, not summaries.</h3><p>See what the sources support, where they disagree, and how current the advice is.</p><div class="mini-claim"><span class="live-dot" aria-hidden="true"></span><span>“MCP standardizes tool discovery.”</span><b>High</b></div></article><article class="system-card system-card-console card"><div class="card-kicker"><span class="system-number">03</span><span class="badge badge-warning badge-outline">Human in the loop</span></div><h3>Keep the final call yours.</h3><p>Open the source, change the depth, or ask the next question. The agent works alongside your curiosity.</p><div class="mockup-code"><pre data-prefix="›"><code>read → compare → explain</code></pre><pre data-prefix="✓"><code>learner decides</code></pre></div></article></div></div></section>
+
+      <section class="evidence-section shell" id="evidence" aria-labelledby="evidence-title"><div class="evidence-header"><div><span class="eyebrow">Designed for trust</span><h2 id="evidence-title">Not another<br /><em>answer box.</em></h2></div><p>Perspectify is a visible operating layer for learning. The output is useful because the path is short and the evidence is close.</p></div><div class="evidence-rail"><div><span class="rail-mark" aria-hidden="true">↳</span><strong>Primary sources stay primary.</strong><small>Original specs and docs lead the route.</small></div><div><span class="rail-mark" aria-hidden="true">↳</span><strong>Disagreement stays visible.</strong><small>Tradeoffs are part of understanding.</small></div><div><span class="rail-mark" aria-hidden="true">↳</span><strong>Depth follows your time.</strong><small>Ten minutes can still be meaningful.</small></div></div></section>
+
+      <section class="landing-cta shell" id="start" aria-labelledby="start-title"><div><span class="eyebrow">Your turn</span><h2 id="start-title">Bring the question<br /><em>you keep circling.</em></h2></div><a class="btn btn-primary btn-lg" href="/dashboard">Open the research desk <span aria-hidden="true">↗</span></a></section>
+    </main>
+
+    <footer class="site-footer shell"><span>Perspectify / an evidence-backed learning desk</span><span>Built with DaisyUI · Agno · GPT-5.6</span></footer>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "perspectify",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Evidence-backed learning briefs for the OpenAI Build Week Education track",
+  "type": "module",
+  "scripts": {
+    "build:css": "bunx @tailwindcss/cli -i ./src/input.css -o ./public/tailwind.css --minify",
+    "start": "bun run build:css && bun server.js",
+    "dev": "bun run build:css && bun --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "daisyui": "^5.6.18",
+    "tailwindcss": "^4.3.3"
+  }
+}

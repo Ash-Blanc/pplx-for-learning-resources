@@ -1,0 +1,8 @@
+node_modules/
+.env
+.DS_Store
+npm-debug.log*
+bun-debug.log*
+.venv/
+agent/.venv/
+agent/__pycache__/

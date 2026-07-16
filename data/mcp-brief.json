@@ -1,0 +1,136 @@
+{
+  "topic": "AI agents and MCP",
+  "eyebrow": "A focused field guide",
+  "title": "The shortest trustworthy route into AI agents and MCP",
+  "dek": "Start with the mental model, then trace how tools, context, and permissions turn a model into a useful agent.",
+  "mode": "fixture",
+  "stats": {
+    "sources": 5,
+    "claims": 12,
+    "filtered": 8,
+    "freshness": "Current"
+  },
+  "orientation": {
+    "title": "In one sentence",
+    "body": "An AI agent is a model inside a loop that can observe context, choose an action, call a tool, inspect the result, and continue toward a goal. MCP is a standard way for an AI application to discover and use external tools and resources without every integration becoming a one-off adapter."
+  },
+  "path": [
+    {
+      "time": "5 min",
+      "label": "Get the shape",
+      "title": "Model, loop, tools",
+      "body": "Learn the difference between a chat completion, a workflow, and an agent. The useful shift is not that the model becomes autonomous. It is that the surrounding system gives it a bounded loop and observable actions.",
+      "sourceIds": ["openai-agents", "anthropic-agents"]
+    },
+    {
+      "time": "20 min",
+      "label": "See the contract",
+      "title": "MCP as a shared language",
+      "body": "MCP separates the host application from servers that expose tools, resources, and prompts. That separation makes integrations portable, but it also makes capability discovery and permission boundaries first-class design problems.",
+      "sourceIds": ["mcp-spec", "mcp-intro"]
+    },
+    {
+      "time": "60 min",
+      "label": "Build judgment",
+      "title": "Reliability is the product",
+      "body": "Study approval gates, narrow tool schemas, trace logs, retries, and evals. A polished agent is less about adding more autonomy and more about making every consequential action explainable and reversible.",
+      "sourceIds": ["mcp-spec", "openai-agents", "agent-security"]
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-1",
+      "text": "An agent is a bounded control loop around a model, not a model with a personality.",
+      "status": "consensus",
+      "confidence": "High",
+      "explanation": "The primary sources describe agents in terms of planning, tool use, state, and loop control rather than an independent form of agency.",
+      "sourceIds": ["openai-agents", "anthropic-agents"]
+    },
+    {
+      "id": "claim-2",
+      "text": "MCP improves integration portability by standardizing how hosts discover tools and resources.",
+      "status": "consensus",
+      "confidence": "High",
+      "explanation": "The protocol specification and introduction agree on the host, client, and server relationship.",
+      "sourceIds": ["mcp-spec", "mcp-intro"]
+    },
+    {
+      "id": "claim-3",
+      "text": "More tool access does not automatically make an agent more useful.",
+      "status": "context",
+      "confidence": "High",
+      "explanation": "The engineering guidance converges on narrow schemas, explicit approvals, and observability as the conditions that make tool use reliable.",
+      "sourceIds": ["agent-security", "openai-agents"]
+    },
+    {
+      "id": "claim-4",
+      "text": "The best architecture depends on whether the task is a deterministic workflow or an open-ended decision loop.",
+      "status": "tradeoff",
+      "confidence": "Medium",
+      "explanation": "Agent frameworks emphasize flexible loops, while production guidance recommends keeping predictable work deterministic. The disagreement is about task shape, not a single universal winner.",
+      "sourceIds": ["openai-agents", "agent-security"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "mcp-spec",
+      "title": "Model Context Protocol specification",
+      "publisher": "Model Context Protocol",
+      "type": "Specification",
+      "date": "2025",
+      "readTime": "18 min",
+      "quality": "Primary source",
+      "reason": "The protocol’s source of truth for lifecycle, tools, resources, and transport.",
+      "url": "https://modelcontextprotocol.io/specification/latest"
+    },
+    {
+      "id": "mcp-intro",
+      "title": "Introducing the Model Context Protocol",
+      "publisher": "Anthropic",
+      "type": "Engineering note",
+      "date": "2024",
+      "readTime": "8 min",
+      "quality": "Origin story",
+      "reason": "Explains the integration problem MCP was designed to solve.",
+      "url": "https://www.anthropic.com/news/model-context-protocol"
+    },
+    {
+      "id": "openai-agents",
+      "title": "Agents SDK documentation",
+      "publisher": "OpenAI",
+      "type": "Developer docs",
+      "date": "2025",
+      "readTime": "14 min",
+      "quality": "Primary source",
+      "reason": "Grounds the agent loop in handoffs, tools, guardrails, and traces.",
+      "url": "https://openai.github.io/openai-agents-python/"
+    },
+    {
+      "id": "anthropic-agents",
+      "title": "Building effective agents",
+      "publisher": "Anthropic",
+      "type": "Practical guide",
+      "date": "2024",
+      "readTime": "12 min",
+      "quality": "Practitioner guide",
+      "reason": "A useful distinction between workflows and agents, with patterns for choosing less autonomy.",
+      "url": "https://www.anthropic.com/research/building-effective-agents"
+    },
+    {
+      "id": "agent-security",
+      "title": "Agentic AI security guidance",
+      "publisher": "OWASP",
+      "type": "Security guide",
+      "date": "2025",
+      "readTime": "16 min",
+      "quality": "Risk reference",
+      "reason": "Adds the missing production lens: permission boundaries, tool abuse, and observability.",
+      "url": "https://genai.owasp.org/"
+    }
+  ],
+  "next": [
+    "Build a read-only MCP server and inspect the tool schema it exposes.",
+    "Add an approval gate before a tool can change external state.",
+    "Trace one complete run from user request to tool result and evaluate every step."
+  ]
+}

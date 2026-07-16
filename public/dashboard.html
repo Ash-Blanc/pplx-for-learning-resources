@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="perspectify">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#151a22" />
+    <meta name="description" content="Perspectify research dashboard." />
+    <title>Research desk | Perspectify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/tailwind.css" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="dashboard-page">
+    <a class="skip-link" href="#research">Skip to the research form</a>
+    <header class="site-header shell dashboard-header">
+      <a class="wordmark" href="/" aria-label="Perspectify home"><span class="wordmark-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>perspectify</span></a>
+      <div class="dashboard-context"><span class="pulse-mark" aria-hidden="true"></span><span>Research desk</span><span class="context-divider" aria-hidden="true">/</span><span class="context-muted">New brief</span></div>
+      <a class="nav-cta btn btn-sm btn-outline" href="/">Back to landing <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main class="dashboard-main shell">
+      <div class="dashboard-heading"><div><span class="eyebrow">Workspace / 01</span><h1>What are you trying<br /><em>to understand?</em></h1></div><p>Set the question, the starting point, and the time you have. Perspectify will build the shortest trustworthy route.</p></div>
+
+      <section class="dashboard-console console-card" id="research" aria-labelledby="console-title">
+        <div class="console-topbar"><div class="console-brand"><span class="console-symbol" aria-hidden="true">⌁</span><span id="console-title">perspectify / new brief</span></div><span class="badge badge-success badge-outline"><span class="status-dot" aria-hidden="true"></span> Agent ready</span></div>
+        <div class="dashboard-console-grid">
+          <form id="research-form">
+            <div class="console-tabs tabs tabs-boxed" role="tablist" aria-label="Research console views"><button class="tab tab-active" type="button" role="tab" aria-selected="true">Live brief</button><button class="tab" type="button" role="tab" aria-selected="false">Source map</button><button class="tab" type="button" role="tab" aria-selected="false">Agent trace</button></div>
+            <div class="command-block"><div class="command-label"><span class="utility-label">Your next question</span><span class="command-hint">⌘ ↵ to research</span></div><div class="command-input"><span class="prompt-symbol" aria-hidden="true">›</span><textarea class="textarea textarea-bordered" id="topic" name="topic" rows="3" maxlength="160" required aria-describedby="topic-help">AI agents and MCP</textarea></div><span class="field-hint" id="topic-help">A topic, a decision, or the thing you keep circling.</span></div>
+            <div class="console-controls"><fieldset class="control-fieldset"><legend>Starting point</legend><div class="segmented three-up" role="radiogroup" aria-label="Starting point"><label><input class="radio radio-primary" type="radio" name="level" value="New to it" checked /><span>New to it</span></label><label><input class="radio radio-primary" type="radio" name="level" value="Some context" /><span>Some context</span></label><label><input class="radio radio-primary" type="radio" name="level" value="Practitioner" /><span>Practitioner</span></label></div></fieldset><fieldset class="control-fieldset"><legend>Time budget</legend><div class="segmented three-up" role="radiogroup" aria-label="Time budget"><label><input class="radio radio-primary" type="radio" name="minutes" value="10" /><span>10 min</span></label><label><input class="radio radio-primary" type="radio" name="minutes" value="30" checked /><span>30 min</span></label><label><input class="radio radio-primary" type="radio" name="minutes" value="60" /><span>60 min</span></label></div></fieldset></div>
+            <button class="primary-button btn btn-primary btn-block" type="submit" id="research-button"><span>Research this topic</span><span class="button-arrow" aria-hidden="true">↗</span></button><p class="form-footnote"><span class="tiny-shield" aria-hidden="true">◇</span> Source trail included. Provider fallback included.</p>
+          </form>
+          <aside class="dashboard-sidecar"><span class="utility-label">What happens next</span><ol class="sidecar-list"><li><span>01</span><div><strong>Plan</strong><small>Translate intent into a research brief.</small></div></li><li><span>02</span><div><strong>Find</strong><small>Search primary sources and field notes.</small></div></li><li><span>03</span><div><strong>Check</strong><small>Compare claims, dates, and context.</small></div></li><li><span>04</span><div><strong>Write</strong><small>Return the minimum useful path.</small></div></li></ol><div class="sidecar-note"><span class="live-dot" aria-hidden="true"></span><p>The agent shows its work. You decide what to read.</p></div></aside>
+        </div>
+        <div class="console-metrics" aria-label="Demo research metrics"><div><strong>05</strong><span>sources selected</span></div><div><strong>12</strong><span>claims checked</span></div><div><strong>08</strong><span>echoes filtered</span></div></div>
+      </section>
+
+      <section class="trace-section dashboard-trace" id="trace-section" hidden aria-labelledby="trace-title"><div class="section-heading compact-heading"><div><span class="utility-label">Live agent trace</span><h2 id="trace-title">Building your route in public.</h2></div><span id="trace-mode" class="mode-label badge badge-ghost">Local evidence set</span></div><div class="trace" id="trace" aria-live="polite"></div></section>
+      <section class="results dashboard-results" id="results" hidden aria-labelledby="results-title"></section>
+    </main>
+
+    <footer class="site-footer shell"><span>Perspectify / research desk</span><span><a href="/">Landing</a> · <a href="https://openai.devpost.com/" target="_blank" rel="noreferrer">Build Week</a></span></footer>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

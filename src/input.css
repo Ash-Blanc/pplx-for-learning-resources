@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: perspectify --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "perspectify";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #1c232d;
+  --color-base-200: #151a22;
+  --color-base-300: #414c5d;
+  --color-base-content: #f2f4f7;
+  --color-primary: #e46b35;
+  --color-primary-content: #ffffff;
+  --color-secondary: #78a9d8;
+  --color-secondary-content: #ffffff;
+  --color-accent: #55c995;
+  --color-accent-content: #ffffff;
+  --color-neutral: #252e3a;
+  --color-neutral-content: #ffffff;
+  --color-info: #78a9d8;
+  --color-info-content: #ffffff;
+  --color-success: #55c995;
+  --color-success-content: #ffffff;
+  --color-warning: #e2b54c;
+  --color-warning-content: #ffffff;
+  --color-error: #ef7867;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.375rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
