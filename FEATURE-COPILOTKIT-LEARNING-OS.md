@@ -1,323 +1,278 @@
-# Feature Request: CopilotKit-Powered Agent-Native Learning OS
+# Feature Request: Progressive CopilotKit Integration (Do Not Rewrite Perspectify)
 
-## Strategic Direction
+## Critical Constraint
 
-Perspectify should fully embrace React + CopilotKit as the primary interaction layer.
+The current frontend is already good.
 
-The objective is not to build another educational chatbot.
+It has:
+- Clear landing page
+- Strong editorial design language
+- Research desk workflow
+- Live agent trace
+- Learning-path output
+- Minimal cognitive load
 
-The objective is to build the most compelling agent-native learning experience in education.
+This must be preserved.
 
-Think:
+The goal is NOT:
+- Rebuild everything
+- Replace the dashboard
+- Turn the product into an overwhelming agent playground
+- Lose the current simplicity
 
-- Cursor for learning
-- Manus for learning
-- Perplexity + Khan Academy + CopilotKit
-- A persistent AI learning strategist living inside the application
+The goal is:
 
-CopilotKit should become a core differentiator, not a small UI enhancement.
-
----
-
-## Why CopilotKit
-
-Most AI learning products stop at:
-
-User → Chat → Answer
-
-CopilotKit enables:
-
-User ↔ Agent ↔ Application State ↔ Generative UI ↔ Human Feedback
-
-That architecture is dramatically more powerful for education.
-
-The real value is not the chat widget.
-
-The real value is:
-
-- CoAgents
-- Shared State
-- Agentic Generative UI
-- Human-in-the-Loop Workflows
-- Multi-Agent Collaboration
-- Agent Transparency
-- Agent-Controlled Experiences
+Add CopilotKit progressively while preserving the existing experience.
 
 ---
 
-## Core Product Vision
+## Current Product Strengths
 
-Perspectify becomes an AI Learning Operating System.
+Today Perspectify already has:
 
-The learner and AI collaborate inside a persistent learning workspace.
+1. Topic Input
+2. Learner Level Selection
+3. Time Budget Selection
+4. Research Trace
+5. Learning Brief
+6. Curated Resource List
+7. Learning Path Ordering
 
-The AI:
+This is the core experience.
 
-- Understands current knowledge.
-- Tracks progress.
-- Builds curricula.
-- Recommends resources.
-- Creates projects.
-- Generates visual learning interfaces.
-- Evaluates understanding.
-- Revises plans over time.
+It works.
 
-The relationship should feel like working with a world-class private tutor.
+CopilotKit should amplify it rather than replace it.
 
 ---
 
-## CopilotKit CoAgents Architecture
+## Phase 1: Copilot Side Panel (Minimal Risk)
 
-### Shared Learning State
+Do not change the landing page.
 
-The learner and agent operate on a shared state.
+Do not redesign the dashboard.
+
+Simply add:
+
+- CopilotKit chat panel
+- Collapsible right drawer
+- Floating assistant button
+
+The existing learning path remains the primary experience.
+
+The copilot becomes:
+
+"Learning Guide"
 
 Example:
 
-```ts
-{
-  learnerGoal,
-  skillLevel,
-  timeBudget,
-  completedResources,
-  currentRoadmap,
-  projects,
-  weakConcepts,
-  knowledgeGraph,
-  learningVelocity
-}
-```
+User generates path.
 
-Benefits:
+Then asks:
 
-- Agent always knows learner progress.
-- UI reflects agent updates instantly.
-- Learner can modify state directly.
-- Agent can adapt curriculum continuously.
+- Explain this roadmap.
+- Which resource should I start with?
+- Give me a faster route.
+- Make this project-focused.
+- Recommend a beginner alternative.
 
-This should be implemented using CopilotKit CoAgents.
+This immediately increases value with minimal frontend disruption.
 
 ---
 
-## CopilotKit Generative UI
+## Phase 2: Shared Learning State
 
-This is the most exciting opportunity.
+Introduce CoAgents.
 
-Instead of returning text responses, the AI generates real React interfaces.
+The agent receives access to:
 
-Examples:
+- Topic
+- Skill level
+- Time budget
+- Generated learning path
+- Sources
+- Claims
+- Recommended next steps
 
-### Learning Path Timeline
+The agent no longer starts from an empty chat.
 
-Agent generates:
+It understands the page the learner is currently viewing.
 
-- Milestones
-- Estimated effort
-- Dependencies
-- Progress indicators
-
-### Concept Maps
-
-Agent generates:
-
-- Interactive graphs
-- Dependency trees
-- Prerequisite visualizations
-
-### Resource Intelligence Cards
-
-Agent generates:
-
-- Difficulty
-- Authority
-- Freshness
-- Time cost
-- Why selected
-
-### Adaptive Study Plans
-
-Agent generates:
-
-- Daily plans
-- Weekly plans
-- Sprint plans
-
-### Knowledge Gap Dashboards
-
-Agent generates:
-
-- Weak areas
-- Confidence scores
-- Suggested remediation
-
-### Interactive Quizzes
-
-Agent generates:
-
-- Question sets
-- Flashcards
-- Checkpoints
-- Reflection prompts
-
-### Project Canvases
-
-Agent generates:
-
-- Project plans
-- Milestones
-- Deliverables
-- Rubrics
-
-This should use native CopilotKit Generative UI instead of simple markdown outputs.
+This is probably the highest ROI CopilotKit feature.
 
 ---
 
-## Agent Transparency Layer
+## Phase 3: Upgrade Existing Sections With Generative UI
 
-Every major action should be visible.
+Do NOT create new screens.
 
-Examples:
+Upgrade existing output blocks.
+
+### Existing
+
+Learning Path
+
+### Enhanced
+
+Learning Path Timeline Component
+
+---
+
+### Existing
+
+Claims Section
+
+### Enhanced
+
+Evidence Comparison Cards
+
+---
+
+### Existing
+
+Source List
+
+### Enhanced
+
+Resource Intelligence Cards
+
+showing:
+
+- difficulty
+- effort
+- authority
+- freshness
+- practical value
+
+---
+
+### Existing
+
+Next Steps
+
+### Enhanced
+
+Adaptive Study Plan
+
+This preserves the current layout while making it feel agent-native.
+
+---
+
+## Phase 4: Agent Activity Feed
+
+You already have:
+
+Live Agent Trace
+
+Do not remove it.
+
+Extend it.
+
+Current:
+
+- Plan the question
+- Find strong sources
+- Check evidence
+- Write learning brief
+
+Future:
 
 - Discovering resources
-- Evaluating authority
-- Detecting prerequisites
-- Building roadmap
-- Revising curriculum
-- Assessing progress
+- Comparing sources
+- Building curriculum
+- Finding prerequisites
+- Identifying knowledge gaps
 
-Learners should watch the strategist think.
-
-This dramatically increases trust.
+This aligns perfectly with CopilotKit's transparency philosophy.
 
 ---
 
-## Human-In-The-Loop Learning
+## Phase 5: Human-In-The-Loop Learning
 
-CopilotKit interrupt patterns should be used extensively.
+After a path is generated:
 
-Examples:
+Agent can suggest:
 
-Agent asks:
+- harder path
+- faster path
+- project-first path
+- video-first path
+- documentation-first path
 
-- Approve roadmap?
-- Skip fundamentals?
-- Increase difficulty?
-- Replace resources?
-- Start project mode?
-- Switch learning style?
+Learner approves changes.
 
-The learner becomes a collaborator instead of a consumer.
+The roadmap updates.
 
----
-
-## Multi-Agent Learning Team
-
-Future architecture:
-
-### Scout Agent
-
-Finds:
-
-- Blogs
-- Docs
-- Videos
-- Courses
-- Papers
-
-### Curriculum Agent
-
-Designs learning journeys.
-
-### Mentor Agent
-
-Explains concepts.
-
-### Evaluator Agent
-
-Measures understanding.
-
-### Project Coach Agent
-
-Creates real-world implementation challenges.
-
-### Accountability Agent
-
-Tracks momentum and consistency.
-
-CopilotKit becomes the orchestration and interaction layer across all agents.
+This uses CopilotKit's strengths without introducing complexity.
 
 ---
 
-## Learning Canvas
+## Phase 6: Persistent Learning Memory
 
-Replace the current dashboard with a persistent learning workspace.
+Only after the previous phases are successful.
 
-Core panels:
+Store:
 
-1. Copilot Chat
-2. Learning Roadmap
-3. Active Resource Viewer
-4. Knowledge Graph
-5. Progress Dashboard
-6. Projects Workspace
-7. Notes
-8. Agent Activity Feed
+- topics explored
+- completed resources
+- preferred formats
+- weak areas
 
-The entire experience should feel alive.
+Result:
+
+Perspectify becomes smarter over time.
 
 ---
 
-## Integration With Existing Stack
+## Features Explicitly Deferred
 
-Frontend:
+Do NOT build initially:
+
+- Infinite canvas
+- Multi-agent swarms
+- Complex workspace IDE
+- Heavy dashboard redesign
+- Notion-like interface
+- Miro-like interface
+
+These add significant complexity before product validation.
+
+---
+
+## Recommended Technical Migration
+
+Current:
+
+- Bun
+- Vanilla JS
+- Agno AgentOS
+
+Next:
 
 - Next.js
 - React
 - CopilotKit
-- Tailwind
-- Generative UI Components
+- Existing Perspectify visual language
+- Existing information architecture
 
-Backend:
+Migration rule:
 
-- Agno AgentOS
-- OpenAI GPT-5.x
-- Firecrawl
-- Parallel
-- Learning Memory Layer
+Recreate the existing UI first.
 
-CopilotKit should become the primary UX and AX layer while Agno remains the primary agent runtime.
+Then layer CopilotKit capabilities on top.
 
-This gives us both:
-
-- Strong agent orchestration
-- Best-in-class agent interface
-
----
-
-## SOTA Differentiators
-
-Features most learning products do not have:
-
-- Persistent learning memory
-- Agent-generated interfaces
-- Dynamic curriculum revision
-- Human-in-the-loop education workflows
-- Multi-agent teaching teams
-- Visual knowledge modeling
-- Project-first learning
-- Transparent agent reasoning
-- Shared state collaboration
+No visual redesign unless a feature requires it.
 
 ---
 
 ## Success Metric
 
-Current:
+Bad outcome:
 
-"Generate a useful learning path."
+"We rebuilt Perspectify around CopilotKit."
 
-Target:
+Good outcome:
 
-"Provide a continuously adapting AI learning strategist that collaborates with the learner through a living workspace powered by CopilotKit."
+"Perspectify feels like the same product, except now every learning path comes with an intelligent learning strategist that understands the learner and the page they are looking at."
 
-If executed well, Perspectify should feel less like searching for resources and more like hiring an elite personal tutor that lives inside the application.
+The shortest path to a superior product is progressive enhancement, not replacement.
